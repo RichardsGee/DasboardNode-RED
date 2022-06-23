@@ -27,6 +27,7 @@ vim \
 openssh-server \
 dbus -y
 
+curl -fsSL get.docker.com | sh
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
  
 systemctl enable firewalld
