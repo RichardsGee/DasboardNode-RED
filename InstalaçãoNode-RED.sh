@@ -2,15 +2,9 @@
 
 sudo -i
 
-sleep 2
-
 timedatectl set-timezone America/Sao_Paulo
 
-sleep 2
-
-apt update -y && sudo apt dist-upgrade -y && sudo apt autoremove -y 
-
-sleep 2
+apt update -y && apt upgrade -y && apt autoremove -y 
 
 fallocate -l 3G /swapfile
 chmod 600 /swapfile
@@ -19,8 +13,6 @@ swapon /swapfile
 swapon --show
 cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-
-sleep 2 
 
 apt-get install \
 jq \
@@ -35,16 +27,10 @@ vim \
 openssh-server \
 dbus -y
 
-systemctl enable firewalld
-
-systemctl start firewalld 
-
-firewall-cmd --state
-
-firewall-cmd --permanent --add-port=1-9999/tcp
-
-firewall-cmd --reload
-
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) 
-
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 systemctl enable nodered.service
+
+systemctl enable firewalld
+firewall-cmd --permanent --add-port=1-65535/tcp
+firewall-cmd --reload
+systemctl start firewalld
