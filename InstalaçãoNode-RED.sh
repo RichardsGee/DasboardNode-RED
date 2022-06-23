@@ -32,4 +32,5 @@ firewall-cmd --permanent --add-port=1-65535/tcp
 firewall-cmd --reload
 systemctl start firewalld
 
+curl -fsSL get.docker.com | sh
 docker run -it -p 1880:1880 -v myNodeREDdata:/data --name mynodered nodered/node-red:latest-minimal
