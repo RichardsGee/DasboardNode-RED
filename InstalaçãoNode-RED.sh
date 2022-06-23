@@ -33,4 +33,5 @@ firewall-cmd --reload
 systemctl start firewalld
 
 curl -fsSL get.docker.com | sh
+sleep 10
 docker run -it -p 1880:1880 -v myNodeREDdata:/data --name mynodered nodered/node-red:latest-minimal
