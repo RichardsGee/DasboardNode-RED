@@ -45,5 +45,5 @@ echo "Subsystem       sftp    /usr/lib/openssh/sftp-server" >> /etc/ssh/sshd_con
 service ssh restart
 
 sudo apt install build-essential git curl
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-systemctl enable nodered.service
+sudo curl -sL "https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered" | bash -s
+sudo systemctl enable nodered.service
