@@ -44,4 +44,5 @@ echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 echo "Subsystem       sftp    /usr/lib/openssh/sftp-server" >> /etc/ssh/sshd_config
 service ssh restart
 
-sudo npm install -g --unsafe-perm node-red
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+systemctl enable nodered.service
