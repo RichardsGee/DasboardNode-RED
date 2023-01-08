@@ -1,0 +1,137 @@
+<style> 
+    .horizonte1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .paracima1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .botaoparacima1 {        
+        background-color: transparent;    
+    }
+    .iconeparacima1 {
+        font-size: 40px;
+        color: black;
+    } 
+
+    .botaoparaesquerda1 {        
+        background-color: transparent;
+    }
+    .iconeparaesquerda1 {        
+        font-size: 40px;
+        color: black;
+    }
+    
+    .botaoselecao1 {        
+        background-color: transparent;
+    }
+    .iconeselecao1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    .botaoparadireita1 {        
+        background-color: transparent;
+    }
+    .iconeparadireita1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    .parabaixo1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }    
+    .botaoparabaixo1 {        
+        background-color: transparent;
+    }
+    .iconeparabaixo1 {
+        font-size: 40px;
+        color: black;
+    }
+</style>
+
+<div class="paracima1">       
+    <md-button class="botaoparacima1">
+        <i class="iconeparacima31 material-icons">arrow_upward</i>
+    </md-button>
+</div>
+
+<br> <br>
+
+<div class="horizonte1">
+    <div class="paraesquerda1">
+        <md-button class="botaoparaesquerda1">
+            <i class="iconeparaesquerda1 material-icons">arrow_back</i>
+        </md-button>
+    </div>    
+
+    &nbsp; &nbsp;
+
+    <div class="selecao1">
+        <md-button class="botaoselecao1">
+            <i class="iconeselecao1 material-icons">radio_button_checked</i>
+        </md-button>
+    </div> 
+
+    &nbsp; &nbsp;
+
+    <div class="paradireita1">
+        <md-button class="botaoparadireita1">
+            <i class="iconeparadireita1 material-icons">arrow_forward</i>
+        </md-button>
+    </div> 
+</div>
+
+<br> <br>
+
+<div class="parabaixo31">
+    <md-button class="botaoparabaixo1">
+        <i class="iconeparabaixo1 material-icons">arrow_downward</i>
+    </md-button>
+</div>
+       
+<script>
+    (function($scope) {
+        $('.paracima1').on('click', function() {        
+            $scope.send({"payload": "cima"});
+        });    
+    })(scope);
+</script>
+
+<script>
+    (function($scope) {
+        $('.paraesquerda1').on('click', function() {       
+            $scope.send({"payload": "esquerda"});
+        }); 
+    })(scope);
+</script>
+
+<script>
+    (function($scope) {
+        $('.paradireita1').on('click', function() {        
+            $scope.send({"payload": "direita"});
+        });    
+    })(scope);
+</script>
+
+<script>
+    (function($scope) {
+        $('.parabaixo1').on('click', function() {        
+            $scope.send({"payload": "baixo"});
+        });    
+    })(scope);
+</script>
+
+<script>
+    (function($scope) {
+        $('.selecao1').on('click', function() {        
+            $scope.send({"payload": "selecionar"});
+        });    
+    })(scope);
+</script>
