@@ -1,0 +1,39 @@
+<style>
+    .total1 { 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .titulo1 {
+        color: #000000;        
+        font-size: 14px;
+    }
+    .barra1 {        
+        width: 100%;
+        max-width: 230px;
+        height: 18px; 
+        border-radius: 25px;
+        border: 1px solid #050505;
+    }
+    .barra1::-webkit-progress-bar {
+        background-color: #d1d1d1;
+        border-radius: 25px;
+    }
+    .barra1::-webkit-progress-value {
+        background-color: #53C7FA;
+        border-radius: 25px;        
+    }    
+</style>
+
+<div class="total1"> 
+
+    <div class="titulo1">
+        Sala {{msg.payload}}% 
+    </div>
+
+    <progress class="barra1" value="{{msg.payload}}" min="0" max="100"/>
+
+</div>
