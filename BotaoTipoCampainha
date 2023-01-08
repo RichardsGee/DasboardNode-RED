@@ -1,0 +1,35 @@
+<style>
+    .titulo1 {
+        color: #000000;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .botao1 {
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .icone1 {
+        font-size: 50px;
+        color: #000000;
+    }
+</style>
+
+<div class="titulo1">
+    NOME DO BOTÃO
+</div>
+
+<div class="botao1">
+    <md-button>
+        <i class="icone1 material-icons">blur_on</i>
+    </md-button>
+</div>
+
+<script>
+    (function($scope) {
+        $('.botao1').on('click', function() {            
+            $scope.send({"payload": "reboot"});
+        });    
+    })(scope);
+</script>
