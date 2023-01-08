@@ -1,0 +1,72 @@
+<style>
+    .titulo1 {
+        text-align: center;
+        color: #000000;        
+        font-size: 18px;
+    }
+    .botao1 {      
+        text-align: center;        
+    }
+    .icone1 {
+        font-size: 55px;
+    }
+</style>
+
+<div class="titulo1">
+    NOME DO BOTAO {{msg.payload}}
+</div>
+
+<md-button class="botao1" ng-click="toggle()">
+    <i class="icone1 material-icons"></i>
+</md-button>
+
+<script>
+    (function($scope) {
+
+    var bloco = ".botao1"; 
+    var objeto = $(bloco);
+    
+    scope.toggle = function(){        
+
+        var objeto = $(bloco);
+        var estado = objeto.data("state");
+
+        if(estado == "ON"){
+            OFF(objeto);
+            $scope.send({"payload": "OFF"});            
+        } else {
+            ON(objeto);
+            $scope.send({"payload": "ON"});
+        }        
+    } 
+    
+    scope.$watch('msg', function(msg) {
+
+        var objeto = $(bloco);
+        
+        if (msg) {
+            if(msg.payload == "ON"){
+                ON(objeto);
+            } else if(msg.payload == "OFF"){
+                OFF(objeto);
+            }
+          
+        }        
+    }); 
+    
+    function OFF(objeto) {        
+        objeto.data("state","OFF");
+        const cor = document.getElementsByClassName("botao1");
+        cor[0].style.color = "#000000";
+        objeto.find("i").html('close');
+    }
+    
+    function ON(objeto) {        
+        objeto.data("state","ON");
+        const cor = document.getElementsByClassName("botao1");
+        cor[0].style.color = "#D2691E";
+        objeto.find("i").html('emoji_objects');
+    }
+
+})(scope)
+</script>
