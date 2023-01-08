@@ -1,0 +1,64 @@
+<style>
+    .titulo1 {
+        color: black;
+        text-align: center;
+        font-size: 18px;
+    }
+    .horizonte1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .botaomais1 {
+        background-color: transparent;
+    }
+    .iconemais1 {
+        font-size: 40px;
+        color: black;
+    }
+    .botaomenos1 {
+        background-color: transparent
+    }
+    .iconemenos1 {
+        font-size: 40px;
+        color: black;
+    }
+</style>
+
+<div class="titulo1">
+    Volume   
+</div>
+
+<br>
+
+<div class="horizonte1">
+
+    <div class="mais1">
+        <md-button class="btnmais1">
+            <i class="icomais1 material-icons">add</i>
+        </md-button>
+    </div>    
+
+    <div class="menos1">
+        <md-button class="btnmenos1">
+            <i class="icomenos1 material-icons">remove</i>
+        </md-button>
+    </div>
+
+</div>
+
+<script>
+    (function($scope) {
+        $('.mais1').on('click', function() {        
+            $scope.send({"payload": "MAIS"});
+        });    
+    })(scope);
+</script>
+
+<script>
+    (function($scope) {
+        $('.menos1').on('click', function() {         
+            $scope.send({"payload": "MENOS"});
+        });    
+    })(scope);
+</script>
