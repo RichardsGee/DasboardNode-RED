@@ -1,0 +1,100 @@
+<style>
+
+    /* cuida de zerar as configurações dos navegadores */
+    html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    
+    /* cuida das cores do fundo da pagina e o torna gradiente */
+    body {
+        // background: -webkit-linear-gradient(
+        //     55deg,
+        //     #FBF6E6 0%,
+        //     #FBF6E6 50%,
+        //     #FBF6E6 100%
+        // );
+        background-image: url("https://conexaoplaneta.com.br/wp-content/uploads/2019/03/belezas-surpresas-fundos-do-mar-imagens-premiadas-underwater-photographer-year-conexao-planeta.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center centet;
+    }
+
+    /* cuida da transparencia da barra de titulo */
+    body.nr-dashboard-theme md-toolbar {
+        background-color: transparent !important;
+    }
+    
+    /* cuida da transperancia dos botões dos carões */
+    body.nr-dashboard-theme md-content md-card {
+        background-color: transparent !important;
+    }
+
+    /* cuida da transperencia de fundo do menu */
+    body.nr-dashboard-theme md-sidenav {        
+        background-color: transparent !important;
+    }
+
+    /* cuida do arredondamento da seleção do item selecionado nos botões do menu */
+    button.md-no-style {
+        border-radius: 10px !important;
+    } 
+
+    /* cuida da cor da seleção do item selecionado no menu */
+    .nr-menu-item-active div button {
+        border-right: 4px solid black !important;
+    }
+
+    /* cuida da cor do texto do botão do menu */
+    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {
+        color: rgba(211,211,211,1) !important;        
+    }
+
+    /* cuida da cor do fundo do botão do menu */
+    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {    
+        background-color: rgba(105, 105, 105, 1) !important;    
+    }
+
+    /* cuida do arrendondamento do botão do menu */
+    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {
+        border-radius: 10px !important;
+    }
+
+    /* cuida da cor do cartão de grupo */
+    ui-card-panel {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255,255,255,0.2) !important;        
+    }
+
+    /* cuida do arrendondamento do cartão de grupo */
+    ui-card-panel {    
+        border-radius: 10px !important;
+    }
+
+    /* cuida de retirar a borda do cartão de grupo */
+    .nr-dashboard-theme ui-card-panel {
+        border-color: #030303 !important;
+    }
+
+    /* cuida da cor do nome do cartão de grupo */
+    .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {        
+        color: #000000 !important;
+    }
+
+    /* cuida da cor do titulo da pagina */
+    body.nr-dashboard-theme md-toolbar .md-toolbar-tools {
+        color: #030303 !important;
+    }
+
+    body.nr-dashboard-theme .md-dialog-content-body {
+        text-align: center;
+    }
+
+    /* cuida da cor do fundo do botão */
+    .nr-dashboard-theme .nr-dashboard-template .md-button {
+        background-color: transparent !important;
+    }
+</style>
