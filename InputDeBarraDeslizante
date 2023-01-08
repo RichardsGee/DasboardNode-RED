@@ -1,0 +1,55 @@
+<style>
+    .total1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .tittulo1 {
+        color: black;        
+        font-size: 14px;
+    }
+    .barradeslizante1 {
+        -webkit-appearance: none;
+        appearance: none;        
+        width: 200px;
+        height: 7px;        
+        border-radius: 25px;
+        background-color: #d9d9db;
+        border: 1px solid #343839;        
+    }   
+    
+    .barradeslizante1::-webkit-slider-thumb {        
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #D2691E;
+        cursor: pointer;
+    }    
+</style>
+
+<div class="total1">
+
+    <div class="titulo1">
+        Volume 
+    </div>
+
+    <div>
+        <input class="barradeslizante1" type="range" min="1" max="100" value="1">
+    </div>
+
+</div>
+<script>
+    (function($scope) {
+        $('.barradeslizante1').on('click', function() {          
+            const bloco = document.getElementsByClassName("barradeslizante1");
+            var objeto = bloco[0].value;
+            $scope.send({"payload": objeto });            
+        });    
+    })(scope);
+</script>
+
