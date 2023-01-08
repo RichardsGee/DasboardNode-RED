@@ -1,0 +1,55 @@
+<style>
+    .titulo1 {
+        color: black;
+        text-align: center;
+        font-size: 18px;    
+    }
+    .barra1 {
+        text-align: center;    
+    }
+    .icone1 {
+        font-size: 55px;
+    }
+</style>
+
+<div class="titulo1">
+    NOME DO EXPOSITOR {{msg.payload}}
+</div>
+
+
+<div class="barra1"> 
+    <i class="icone1 material-icons"></i>
+</div>
+
+<script>
+    (function($scope) {    
+    
+    scope.$watch('msg', function(msg) {         
+
+        var bloco = ".barra1";
+        var objeto = $(bloco);      
+        
+        if (msg) {
+            if(msg.payload == "ON"){
+                ON(objeto);
+            } else if(msg.payload == "OFF"){
+                OFF(objeto);
+            }        
+        }
+    }); 
+    
+    function OFF(objeto){ 
+        const cor = document.getElementsByClassName("barra1");
+        cor[0].style.color = "#000000";        
+        objeto.find("i").html('close');
+    }
+    
+    function ON(objeto){ 
+        const cor = document.getElementsByClassName("barra1");
+        cor[0].style.color = "#D2691E";        
+        objeto.find("i").html('directions_run');                
+    }
+
+})(scope)
+</script>
+
