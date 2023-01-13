@@ -58,7 +58,7 @@
 
 <div class="paracima1">       
     <md-button class="botaoparacima1">
-        <i class="iconeparacima31 material-icons">arrow_upward</i>
+        <i class="iconeparacima1 material-icons">arrow_upward</i>
     </md-button>
 </div>
 
@@ -67,7 +67,7 @@
 <div class="horizonte1">
     <div class="paraesquerda1">
         <md-button class="botaoparaesquerda1">
-            <i class="iconeparaesquerda1 material-icons">arrow_back</i>
+            <i class="iconeparaesquerda31 material-icons">arrow_back</i>
         </md-button>
     </div>    
 
@@ -90,7 +90,7 @@
 
 <br> <br>
 
-<div class="parabaixo31">
+<div class="parabaixo1">
     <md-button class="botaoparabaixo1">
         <i class="iconeparabaixo1 material-icons">arrow_downward</i>
     </md-button>
