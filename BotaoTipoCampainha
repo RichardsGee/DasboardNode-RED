@@ -4,12 +4,12 @@
         text-align: center;
         font-size: 18px;
     }
-
-    .botao1 {
-        background-color: transparent;
+    .botao1 {        
         text-align: center;
     }
-
+    .botaoacao1 {
+        background-color: transparent !important;
+    }
     .icone1 {
         font-size: 50px;
         color: #000000;
@@ -17,19 +17,19 @@
 </style>
 
 <div class="titulo1">
-    NOME DO BOTÃO
+    TITULO DO BOTAO
 </div>
 
 <div class="botao1">
-    <md-button>
+    <md-button class="botaoacao1">
         <i class="icone1 material-icons">blur_on</i>
     </md-button>
 </div>
 
 <script>
     (function($scope) {
-        $('.botao1').on('click', function() {            
-            $scope.send({"payload": "reboot"});
+        $('.botao40').on('click', function() {            
+            $scope.send({"payload": "MENSAGEM ENVIA AO PRESSIONAR"});
         });    
     })(scope);
 </script>
