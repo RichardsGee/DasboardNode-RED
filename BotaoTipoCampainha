@@ -28,7 +28,7 @@
 
 <script>
     (function($scope) {
-        $('.botao40').on('click', function() {            
+        $('.botao1').on('click', function() {            
             $scope.send({"payload": "MENSAGEM ENVIA AO PRESSIONAR"});
         });    
     })(scope);
